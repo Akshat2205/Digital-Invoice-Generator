@@ -19,7 +19,7 @@ $ yarn dev
 ```bash
 $ yarn build
 ```
-*The application will be present in the `build/Release/Digital-Invoice-Generator-win32-x64` directory*
+*The application will be present in the `build/Release/Digital-Invoice-Generator-version-win32-x64` directory*
 
 ## Collaborators
 - Aniruddha Pandey
