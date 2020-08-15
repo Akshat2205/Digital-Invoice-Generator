@@ -4,7 +4,7 @@
 - Node.js
 - Yarn
 
-## Setup
+## Install
 ```bash
 $ git clone https://github.com/bitakshat/Digital-Invoice-Generator.git 
 $ cd Digital-Invoice-Generator/
