@@ -6,7 +6,9 @@
 
 ## Setup
 ```bash
-$ yarn add
+$ git clone https://github.com/bitakshat/Digital-Invoice-Generator.git 
+$ cd Digital-Invoice-Generator/
+$ yarn
 ```
 
 ## Development

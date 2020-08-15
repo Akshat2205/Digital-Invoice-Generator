@@ -5,16 +5,17 @@
   "main": "index.js",
   "repository": "https://github.com/Akshat2205/Digital-Invoice-Generator.git",
   "contributors": [
-  	"Akshat Pal (bitakshat) <akshatpal1232@gmail.com>",
-  	"Aniruddha Pandey (pandevim) <anirudh.pandev@gmail.com>"
+    "Akshat Pal (bitakshat) <akshatpal1232@gmail.com>",
+    "Aniruddha Pandey (pandevim) <anirudh.pandev@gmail.com>"
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "http-server",
+    "dev": "live-server --ignore=node_modules/,build/**/* ./",
     "build": "nativefier http://127.0.0.1:8080 build/Release --name Digital-Invoice-Generator-%npm_package_version% --platform windows"
   },
   "devDependencies": {
-    "http-server": "^0.12.3",
+    "live-server": "^1.2.1",
     "nativefier": "^9.2.0"
-  }
+  },
+  "dependencies": {}
 }

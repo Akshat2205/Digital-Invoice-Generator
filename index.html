@@ -10,6 +10,9 @@
 	<meta name="Description" content="A bill generating desktop application"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+	<!-- Favicon Path -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
 	<!-- Import Brython -->
 	<script src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython_stdlib.js"></script>
@@ -19,6 +22,12 @@
 
 </head>
 <body onload="brython()">
+
+	<form>
+	   <input  type="number" id="a" value="0" name="multiplicand"> * 
+	   <input  type="number" id="b" value="0" name="multiplier"> = 
+	   <output type="number" id="c" value="0" name="product" for="a b"></output>
+	</form>
 
 	<!-- Include Python file -->
 	<script type="text/python" src="main.py"></script>
