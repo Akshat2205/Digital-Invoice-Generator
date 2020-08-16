@@ -23,10 +23,36 @@
 </head>
 <body onload="brython()">
 
+	<h2 align="center" style="color: #008080">Invoice Generator</h2>
+	<hr/>
+
 	<form>
-	   <input  type="number" id="a" value="0" name="multiplicand"> * 
-	   <input  type="number" id="b" value="0" name="multiplier"> = 
-	   <output type="number" id="c" value="0" name="product" for="a b"></output>
+		<!-- User Interface -->
+		<fieldset>
+
+			<legend>Enterprice Name</legend>
+			<label>Bill To: <input type="text" id="billto" placeholder="Customer Name"/></label><br>
+			<label>Product Description: <input type="text" id="prodes" /></label><br>
+			<label>Price: <input type="number" id="price" value="0" name="productprice"></label><br>
+			<label>Quantity: <input type="number" id="quantity" value="0" name="productquantity" /></label><br>
+			
+			<label>Total: </label>
+			<output type="number" id="total" value="0" name="totalprice" for="price quantity"></output><br>
+
+			<label>GST:</label>
+			<label for="gst5">5% <input type="radio" id="gst5" value="5"></label><br>
+			<label for="gst12">12% <input type="radio" id="gst12" value="12"></label><br>
+			<label for="gst18">18% <input type="radio" id="gst" value="18"></label><br>
+
+			<label>Grand Total:</label><br> 
+			<input type="button" value="Submit">
+
+			<label>Your Name: </label>
+			<input type="text" id="name" name="yourname"></br>
+			<output type="text" id="printName" name="outputname" value="0" for="name"></output>
+			<input type="button" name="button" id="btn" value="button">submit name
+
+		</fieldset>
 	</form>
 
 	<!-- Include Python file -->

@@ -6,13 +6,21 @@
 import browser
 from browser import document, console, bind
 
-multiplicand = document['a']
-multiplier = document['b']
-product = document['c']
+productprice = document['price']
+productquantity = document['quantity']
+totalprice = document['total']
 form = document.select('form')
 
-product.value = int(multiplicand.value) * int(multiplier.value)
+totalprice.value = int(productprice.value) * int(productquantity.value)
 
 @bind(form, "input")
 def update_value(arg):
-    product.value = int(multiplicand.value) * int(multiplier.value)
+	totalprice.value = int(productprice.value) * int(productquantity.value)
+
+yourname = document['name']
+button = document['btn']
+
+def show(ev):
+	browser.console.log("Your Name: ", yourname.value)
+
+button.bind("click", show)
