@@ -2,8 +2,6 @@
 
 
 
-
-import browser
 from browser import document, console, bind
 
 productprice = document['price']
@@ -17,10 +15,24 @@ totalprice.value = int(productprice.value) * int(productquantity.value)
 def update_value(arg):
 	totalprice.value = int(productprice.value) * int(productquantity.value)
 
+'''
 yourname = document['name']
 button = document['btn']
+outputname = document['printName']
 
-def show(ev):
-	browser.console.log("Your Name: ", yourname.value)
+def show(event):
+	console.log("Your Name: ", yourname.value)
+	outputname.value = yourname.value
 
 button.bind("click", show)
+'''
+button = document['subbut']
+mastertotal = document['gtotal']
+
+def onClick(event):
+	grandTotal = int(totalprice.value) + int(totalprice.value) * (5 / 100)
+	mastertotal.value = grandTotal
+
+button.bind("click", onClick)
+
+
