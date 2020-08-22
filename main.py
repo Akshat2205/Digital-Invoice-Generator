@@ -26,13 +26,18 @@ def show(event):
 
 button.bind("click", show)
 '''
+
 button = document['subbut']
 mastertotal = document['gtotal']
 
+g5 = document.getElementById('gst5')
+g12 = document.getElementById('gst12')
+g18 = document.getElementById('gst18')
+# console.log("g5 raw: ", g5)
+
 def onClick(event):
-	grandTotal = int(totalprice.value) + int(totalprice.value) * (5 / 100)
+	grandTotal = int(totalprice.value) + int(totalprice.value) * (int(g5.value) / 100)
 	mastertotal.value = grandTotal
 
 button.bind("click", onClick)
-
 

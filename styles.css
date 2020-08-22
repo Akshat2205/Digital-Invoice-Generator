@@ -1,0 +1,23 @@
+label {
+	color: black;
+	margin-right: 10px;
+}
+
+#billto {
+	margin-left: 85px;
+}
+#prodes {
+	margin-left: 1px;
+}
+#price {
+	margin-left: 97px;
+}
+#quantity {
+	margin-left: 74px;
+}
+
+h2.cursive {
+	font-family: Florence, cursive;
+	text-shadow: 5px 2px 4px grey;
+}
+
