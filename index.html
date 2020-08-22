@@ -34,6 +34,7 @@
 		<fieldset>
 
 			<legend style="color: #00008B">Sales Invoice</legend>
+			
 			<label>Bill To: <input type="text" id="billto" placeholder="Customer Name"/></label><br>
 			<label>Product Description: <input type="text" id="prodes" /></label><br>
 			<label>Price: <input type="number" id="price" value="0" name="productprice"></label><br>
@@ -42,21 +43,18 @@
 			<label>Total: </label>
 			<output type="number" id="total" value="0" name="totalprice" for="price quantity"></output><br><hr/>
 
-			<label>GST:</label><br>
-			<label for="gst5">5% <input type="radio" name="gst" id="gst5" value="5"></label><br>
-			<label for="gst12">12% <input type="radio" name="gst" id="gst12" value="12"></label><br>
-			<label for="gst18">18% <input type="radio" name="gst" id="gst18" value="18"></label><br>
-
+			<!-- Tax -->
+			<fieldset id='gst'>
+				<legend>GST:</legend>
+				<label for="gst5">5% <input type="radio" name="gst" id="gst5" value="5"></label>
+				<label for="gst12">12% <input type="radio" name="gst" id="gst12" value="12"></label>
+				<label for="gst18">18% <input type="radio" name="gst" id="gst18" value="18"></label>
+			</fieldset>
+			
 			<label>Grand Total:</label>
 			<output type="number" id="gtotal" value="0" name="mastertotal" for="gst"></output><br>
-			<input type="button" id="subbut" name="button" value="submit"></input>
+			<input type="button" id="subbut" name="button" value="PRINT"></input>
 
-			<!-- Testing bind functionality 
-				<label>Your Name: </label>
-				<input type="text" id="name" name="yourname"></br>
-				<output type="text" id="printName" name="outputname" value="0" for="name"></output>
-				<input type="button" name="button" id="btn" value="button">submit name
-			-->
 		</fieldset>
 	</form>
 
