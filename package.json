@@ -16,7 +16,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "live-server --ignore=node_modules/,build/**/* ./",
+    "dev": "live-server --ignore=node_modules/,build/**/* .",
     "build": "nativefier http://127.0.0.1:8080 build/Release --name Digital-Invoice-Generator-%npm_package_version% --platform windows"
   },
   "devDependencies": {

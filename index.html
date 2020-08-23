@@ -24,38 +24,56 @@
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 
 </head>
-<body onload="brython()" style="background-color: #90EE90">
+<body onload="brython()">
 
-	<h2 align="center" style="color: #00008B" class="cursive">Invoice Generator</h2>
-	<hr/>
+	<h2 align="center">Invoice Generator</h2>
 
-	<form>
+	<form id="form">
 		<!-- User Interface -->
-		<fieldset>
+		<fieldset id="details">
+			<legend>Sales Invoice</legend>
 
-			<legend style="color: #00008B">Sales Invoice</legend>
-			
-			<label>Bill To: <input type="text" id="billto" placeholder="Customer Name"/></label><br>
-			<label>Product Description: <input type="text" id="prodes" /></label><br>
-			<label>Price: <input type="number" id="price" value="0" name="productprice"></label><br>
-			<label>Quantity: <input type="number" id="quantity" value="0" name="productquantity" /></label><br>
-			
-			<label>Total: </label>
-			<output type="number" id="total" value="0" name="totalprice" for="price quantity"></output><br><hr/>
+			<label for="billto">Bill To:</label>
+			<input type="text" id="billto" name="billto" placeholder="Customer Name"/>
 
-			<!-- Tax -->
-			<fieldset id='gst'>
-				<legend>GST:</legend>
-				<label for="gst5">5% <input type="radio" name="gst" id="gst5" value="5"></label>
-				<label for="gst12">12% <input type="radio" name="gst" id="gst12" value="12"></label>
-				<label for="gst18">18% <input type="radio" name="gst" id="gst18" value="18"></label>
-			</fieldset>
+			<label for="prodes">Product Description:</label>
+			<input type="text" id="prodes" name="prodes" />
+
+			<label for="price">Price:</label>
+			<input type="number" id="price" value="0" name="price">
 			
-			<label>Grand Total:</label>
-			<output type="number" id="gtotal" value="0" name="mastertotal" for="gst"></output><br>
-			<input type="button" id="subbut" name="button" value="PRINT"></input>
+			<label for="quantity">Quantity:</label>
+			<input type="number" id="quantity" value="0" name="quantity" />
 
 		</fieldset>
+
+		<fieldset id="total">
+			<legend>Total</legend>
+			<output type="number" id="total-value" value="0" name="totalprice" for="price quantity"></output>
+		</fieldset>
+
+		<!-- Tax -->
+		<fieldset id='gst'>
+			<legend>GST</legend>
+
+			<label for="gst5">5%</label>
+			<input type="radio" name="gst" id="gst5" name="gst5" value="5">
+			
+			<label for="gst12">12%</label>
+			<input type="radio" name="gst" id="gst12" name="gst12" value="12">
+			
+			<label for="gst18">18%</label>
+			<input type="radio" name="gst" id="gst18" name="gst18" value="18">
+
+		</fieldset>
+		
+		<fieldset id="grand-total">
+			<legend>Grand Total</legend>
+			<output type="number" id="gtotal" value="0" name="mastertotal" for="gst"></output>
+		</fieldset>
+
+		<input type="button" id="subbut" name="button" value="PRINT"></input>
+
 	</form>
 
 	<!-- Include Python file -->
