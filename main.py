@@ -17,17 +17,17 @@ productprice.value 		= 0
 productquantity.value 	= 0
 totalprice.value		= 0
 
-gst = 0
 
 @bind(form, "input")
 def update_value(event):
 
+	gst = 0
 	if radio.children[2].checked: gst = int(radio.children[2].value)
 	if radio.children[4].checked: gst = int(radio.children[4].value) 
 	if radio.children[6].checked: gst = int(radio.children[6].value)
 
-	totalprice.value = int(productprice.value) * int(productquantity.value)
-	mastertotal.value = (2 * int(totalprice.value)) * (int(gst) / 100)
+	totalprice.value = int(productprice.value) * int(productquantity.value) 
+	mastertotal.value = int(totalprice.value) + int(totalprice.value) * int(gst) / 100
 
 @bind(submit, "click")
 def print_slip(event):
