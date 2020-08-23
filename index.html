@@ -5,6 +5,9 @@
 	<!-- Application Title -->
 	<title>Digital Invoice Generator</title>
 
+	<!-- Add CSS File -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
 	<!-- Meta Information -->
 	<meta charset="utf-8"/>
 	<meta name="Description" content="A bill generating desktop application"/>
@@ -23,10 +26,55 @@
 </head>
 <body onload="brython()">
 
-	<form>
-	   <input  type="number" id="a" value="0" name="multiplicand"> * 
-	   <input  type="number" id="b" value="0" name="multiplier"> = 
-	   <output type="number" id="c" value="0" name="product" for="a b"></output>
+	<h2 align="center">Invoice Generator</h2>
+
+	<form id="form">
+		<!-- User Interface -->
+		<fieldset id="details">
+			<legend>Sales Invoice</legend>
+
+			<label for="billto">Bill To:</label>
+			<input type="text" id="billto" name="billto" placeholder="Customer Name"/>
+
+			<label for="prodes">Product Description:</label>
+			<input type="text" id="prodes" name="prodes" />
+
+			<label for="price">Price:</label>
+			<input type="number" id="price" value="0" name="price">
+			
+			<label for="quantity">Quantity:</label>
+			<input type="number" id="quantity" value="0" name="quantity" />
+
+		</fieldset>
+
+		<fieldset id="total">
+			<legend>Total</legend>
+			<output type="number" id="total-value" value="0" name="totalprice" for="price quantity"></output>
+		</fieldset>
+
+		<!-- Tax -->
+		<fieldset id='gst'>
+			<legend>GST</legend>
+
+			<label for="gst5">5%</label>
+			<input type="radio" name="gst" id="gst5" name="gst5" value="5">
+			
+			<label for="gst12">12%</label>
+			<input type="radio" name="gst" id="gst12" name="gst12" value="12">
+			
+			<label for="gst18">18%</label>
+			<input type="radio" name="gst" id="gst18" name="gst18" value="18">
+
+		</fieldset>
+		
+		<fieldset id="grand-total">
+			<legend>Grand Total</legend>
+			<output type="number" id="gtotal" value="0" name="mastertotal" for="gst"></output>
+		</fieldset>
+
+		<input type="button" id="subbut" name="button" value="PRINT">
+		<input type="button" id="reset" name="resetButton" value='RESET'>
+
 	</form>
 
 	<!-- Include Python file -->
