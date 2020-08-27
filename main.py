@@ -23,9 +23,9 @@ gst = 0
 def update_value(event):
 
 	global gst
-	if radio.children[2].checked: gst = int(radio.children[2].value)
-	if radio.children[4].checked: gst = int(radio.children[4].value) 
-	if radio.children[6].checked: gst = int(radio.children[6].value)
+	for i in range(2, 7, 2):
+		if radio.children[i].checked: gst = int(radio.children[i].value)
+		console.log(radio.children[i].value)
 
 	totalprice.value = int(productprice.value) * int(productquantity.value) 
 	mastertotal.value = int(totalprice.value) + int(totalprice.value) * int(gst) / 100

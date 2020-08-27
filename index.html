@@ -33,17 +33,23 @@
 		<fieldset id="details">
 			<legend>Sales Invoice</legend>
 
-			<label for="billto">Bill To:</label>
-			<input type="text" id="billto" name="billto" placeholder="Customer Name"/>
-
-			<label for="prodes">Product Description:</label>
-			<input type="text" id="prodes" name="prodes" />
-
-			<label for="price">Price:</label>
-			<input type="number" id="price" value="0" name="price">
-			
-			<label for="quantity">Quantity:</label>
-			<input type="number" id="quantity" value="0" name="quantity" />
+			<div class="flex-label">
+				<div class="label">
+					<label for="billto">Bill To:</label>
+					<label for="prodes">Product Description:</label>
+					<label for="price">Price:</label>
+					<label for="quantity">Quantity:</label>
+				</div>
+			<div class="flex-input">
+				<div class="input">
+					<input type="text" id="billto" name="billto" placeholder="Customer Name"/>
+					<input type="text" id="prodes" name="prodes" />
+					<input type="number" id="price" value="0" name="price">			
+					<input type="number" id="quantity" value="0" name="quantity" />
+				</div>
+			</div>
+				
+			</div>
 
 		</fieldset>
 
