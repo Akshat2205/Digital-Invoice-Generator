@@ -19,13 +19,14 @@ h2 {
 	text-shadow: 5px 2px 4px grey;
 }
 
-fieldset#details {
+/*fieldset#details {
 	display: flex;
 	flex-direction: column;
 	align-items: left;
 }
+*/
 
-div {
+.flexbox-container {
 	display: flex;
 	flex-direction: column;
 }
