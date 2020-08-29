@@ -24,7 +24,6 @@ def update_value(event):
 
 	global gst
 	gst = int(radio.children[1].value)
-	console.log(radio.children[1].value)
 	totalprice.value = int(productprice.value) * int(productquantity.value) 
 	mastertotal.value = int(totalprice.value) + int(totalprice.value) * int(gst) / 100
 
