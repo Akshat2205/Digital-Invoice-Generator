@@ -26,9 +26,9 @@ h2 {
 }
 */
 
-.flexbox-container {
+div {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 input {
