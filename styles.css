@@ -25,6 +25,11 @@ fieldset#details {
 	align-items: left;
 }
 
+div {
+	display: flex;
+	flex-direction: column;
+}
+
 input {
 	max-width: 300px;
 }

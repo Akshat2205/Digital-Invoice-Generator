@@ -33,17 +33,23 @@
 		<fieldset id="details">
 			<legend>Sales Invoice</legend>
 
-			<label for="billto">Bill To:</label>
-			<input type="text" id="billto" name="billto" placeholder="Customer Name"/>
-
-			<label for="prodes">Product Description:</label>
-			<input type="text" id="prodes" name="prodes" />
-
-			<label for="price">Price:</label>
-			<input type="number" id="price" value="0" name="price">
-			
-			<label for="quantity">Quantity:</label>
-			<input type="number" id="quantity" value="0" name="quantity" />
+			<div class="flex-label">
+				<div class="label">
+					<label for="billto">Bill To:</label>
+					<label for="prodes">Product Description:</label>
+					<label for="price">Price:</label>
+					<label for="quantity">Quantity:</label>
+				</div>
+			<div class="flex-input">
+				<div class="input">
+					<input type="text" id="billto" name="billto" placeholder="Customer Name"/>
+					<input type="text" id="prodes" name="prodes" />
+					<input type="number" id="price" value="0" name="price">			
+					<input type="number" id="quantity" value="0" name="quantity" />
+				</div>
+			</div>
+				
+			</div>
 
 		</fieldset>
 
@@ -55,15 +61,7 @@
 		<!-- Tax -->
 		<fieldset id='gst'>
 			<legend>GST</legend>
-
-			<label for="gst5">5%</label>
-			<input type="radio" name="gst" id="gst5" name="gst5" value="5">
-			
-			<label for="gst12">12%</label>
-			<input type="radio" name="gst" id="gst12" name="gst12" value="12">
-			
-			<label for="gst18">18%</label>
-			<input type="radio" name="gst" id="gst18" name="gst18" value="18">
+			<input type="number" name="gst" id="gst">
 
 		</fieldset>
 		
