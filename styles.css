@@ -26,29 +26,15 @@ input {
 .flexbox-container {
 	display: flex;
 	flex-direction: row;
-}
-
-.label-list {
-	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 5px;
 }
 
 .label-input {
 	display: flex;
 	flex-direction: column;
-}
-
-.label-alignment {
-	display: flex;
-	justify-content: end;
-}
-
-.display-text {
-	display: flex;
-	font-family: consolas;
-	flex-direction: column;
-	justify-content: flex-start;
-	background-color: #FFFFFF;
+	flex-wrap: wrap;
+	padding: 5px;
 }
 
 .buttonformat {
@@ -56,8 +42,44 @@ input {
 	flex-direction: row;
 }
 
-.list-items {
+.total-value {
+	font-size: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 100px;
+}
+
+.tax-item {
+	display: flex;
+}
+
+.format-label {
+	display:flex;
+	flex-direction: row;
+	padding: 2px;
+}
+
+.label-input {
 	display: flex;
 	flex-direction: column;
-	background-color: #FFFFFF;
+	padding: 2px;
+}
+
+/* tax label container*/
+.tax-label-container {
+	display: flex;
+	flex-direction: row;
+	padding: 1px;
+}
+
+.tax-label {
+	display: flex;
+	flex-direction: column;
+	width: 155px;
+}
+
+.tax-input {
+	display: flex;
+	flex-direction: column;
+	padding: 2px;
 }
