@@ -43,8 +43,8 @@
 
 				<div>
 					<div class="label-input"><input type="text" id="billto" name="billto" placeholder="Customer Name"/></div>
-					<div class="label-input"><input type="text" id="prodes" name="prodes" placeholder="Product Description" /></div>
-					<div class="label-input"><input type="number" id="price" value="0" name="price">			</div>
+					<div class="label-input"><input type="text" id="prodes" name="prodes" placeholder="Product Name" /></div>
+					<div class="label-input"><input type="number" id="price" value="0" name="price"></div>
 					<div class="label-input"><input type="number" id="quantity" value="0" name="quantity" /></div>
 				</div>
 				<!-- List Added Items -->
@@ -65,17 +65,24 @@
 		<!-- Tax -->
 		<fieldset id="tax">
 			<legend>Tax</legend>
+			<!-- GST input field -->
+			<label for="gst">GST:</label>
+			<input type="number" id="gst" value="0">
 			
-			<div class="tax-label-container">
-				<div class="tax-label"><label>GST</label></div>
-				<div class="tax-label"><label>IGST</label></div>
-				<div class="tax-label"><label>CGST</label></div>
-			</div>
+			<div class="tax-container">
 
-			<div class="tax-item" id='taxitem'>
-				<div class="tax-input"><input type="number" name="gst" id="gst" value='0'></div>
-				<div class="tax-input"><input type="number" name="igst" id="igst" value='0'></div>
-				<div class="tax-input"><input type="number" name="cgst" id="cgst" value='0'></div>
+				<div>
+					<div class="tax-label"><label for="cgst">CGST:</label></div>
+					<div class="tax-label"><label for="igst">SGST:</label></div>
+					<div class="tax-label"><label for="totaltax">Total Tax:</label></div>
+				</div>
+
+				<div>
+					<div class="tax-input"><output id="cgst"></output></div>
+					<div class="tax-input"><output id="sgst"></output></div>
+					<div class="tax-input"><output id="totaltax"></output></div>
+				</div>
+
 			</div>
 
 		</fieldset>

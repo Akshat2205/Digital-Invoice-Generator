@@ -37,6 +37,12 @@ input {
 	padding: 5px;
 }
 
+.format-label {
+	display:flex;
+	flex-direction: row;
+	padding: 2px;
+}
+
 .buttonformat {
 	display: flex;
 	flex-direction: row;
@@ -53,33 +59,27 @@ input {
 	display: flex;
 }
 
-.format-label {
-	display:flex;
-	flex-direction: row;
-	padding: 2px;
-}
-
 .label-input {
 	display: flex;
 	flex-direction: column;
 	padding: 2px;
 }
 
-/* tax label container*/
-.tax-label-container {
-	display: flex;
+/* tax container*/
+.tax-container {
+ 	display: flex;
 	flex-direction: row;
-	padding: 1px;
+	justify-content: center;
 }
 
 .tax-label {
 	display: flex;
 	flex-direction: column;
-	width: 155px;
 }
 
 .tax-input {
 	display: flex;
 	flex-direction: column;
-	padding: 2px;
 }
+
+

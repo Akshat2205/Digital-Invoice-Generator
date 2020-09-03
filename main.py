@@ -14,8 +14,12 @@ resetpage       = document['reset']
 products        = document['prodes']
 additem         = document['buttonitem']
 
-# tax variables
-tax   			= document['taxitem']
+
+# tax calculation variables
+tax             = document['gst']
+sgst            = document['sgst']
+cgst            = document['cgst']
+totaltax        = document['totaltax']
 
 mastertotal.value 		= 0
 productprice.value 		= 0
@@ -29,12 +33,17 @@ item = ''
 def update_value(event):
 
 	global gst
-	gst = int(tax.children[0].children[0].value)
-	igst = int(tax.children[1].children[0].value)
-	cgst = int(tax.children[2].children[0].value)
+	gst = int(tax.value)
+	taxsgst = float(gst /2)
+	taxcgst = float(gst / 2)
 
 	totalprice.value = int(productprice.value) * int(productquantity.value) 
 	mastertotal.value = int(totalprice.value) + int(totalprice.value) * int(gst) / 100
+	
+	# total tax
+	totaltax.value = int(totalprice.value) * int(gst) / 100 
+	sgst.value = taxsgst
+	cgst.value = taxcgst
 
 '''
 
@@ -53,15 +62,12 @@ def reset_values(ev):
 	totalprice.value		= 0
 	
 	# tax
-	gst = 0
-	tax.children[0].children[0].value = 0
-	tax.children[1].children[0].value = 0
-	tax.children[2].children[0].value = 0
+	tax.value       = 0
+	sgst.value      = 0
+	cgst.value      = 0
+	totaltax.value  = 0
 
-	products.value = ""
-	
-	for x in range(0, 3):
-		tax.children[x].value = 0
+	products.value  = ""
 	item = ''
 
 
