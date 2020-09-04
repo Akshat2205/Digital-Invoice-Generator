@@ -28,44 +28,66 @@
 
 	<h2 align="center">Invoice Generator</h2>
 
-	<form id="form">
+	<form id="form" >
 		<!-- User Interface -->
 		<fieldset id="details">
 			<legend>Sales Invoice</legend>
+			<div class="flexbox-container">		
+		
+				<div>
+					<div class="format-label"><label for="billto">Bill To:</label></div>
+					<div class="format-label"><label for="prodes">Product Description:</label></div>
+					<div class="format-label"><label for="price">Price:</label></div>
+					<div class="format-label"><label for="quantity">Quantity:</label></div>
+				</div>
 
-			<div class="flexbox-container">
+				<div>
+					<div class="label-input"><input type="text" id="billto" name="billto" placeholder="Customer Name"/></div>
+					<div class="label-input"><input type="text" id="prodes" name="prodes" placeholder="Product Name" /></div>
+					<div class="label-input"><input type="number" id="price" value="0" name="price"></div>
+					<div class="label-input"><input type="number" id="quantity" value="0" name="quantity" /></div>
+				</div>
+				<!-- List Added Items -->
 				
-				<div class="flexbox-items">
-					<div>
-						<label for="billto">Bill To:</label>
-						<label for="prodes">Product Description:</label>
-						<label for="price">Price:</label>
-						<label for="quantity">Quantity:</label>
-					</div>
-
-					<div>
-						<input type="text" id="billto" name="billto" placeholder="Customer Name"/>
-						<input type="text" id="prodes" name="prodes" />
-						<input type="number" id="price" value="0" name="price">			
-						<input type="number" id="quantity" value="0" name="quantity" />
-					</div>	
-				</div>	
 			</div>
 
+			<!-- Add Item Button -->
+			<input type="button" id="buttonitem" value="+Add Item" class="buttonformat"></input>
+			
 		</fieldset>
 
+		<!-- Total -->
 		<fieldset id="total">
 			<legend>Total</legend>
 			<output type="number" id="total-value" value="0" name="totalprice" for="price quantity"></output>
 		</fieldset>
 
 		<!-- Tax -->
-		<fieldset id='gst'>
-			<legend>GST</legend>
-			<input type="number" name="gst" id="gst">
+		<fieldset id="tax">
+			<legend>Tax</legend>
+			<!-- GST input field -->
+			<label for="gst">GST:</label>
+			<input type="number" id="gst" value="0">
+			
+			<div class="tax-container">
+
+				<div>
+					<div class="tax-label"><label for="cgst">CGST:</label></div>
+					<div class="tax-label"><label for="igst">SGST:</label></div>
+					<div class="tax-label"><label for="totaltax">Total Tax:</label></div>
+				</div>
+
+				<div>
+					<div class="tax-input"><output id="cgst"></output></div>
+					<div class="tax-input"><output id="sgst"></output></div>
+					<div class="tax-input"><output id="totaltax"></output></div>
+				</div>
+
+			</div>
 
 		</fieldset>
 		
+		<!-- Grand Total -->
 		<fieldset id="grand-total">
 			<legend>Grand Total</legend>
 			<output type="number" id="gtotal" value="0" name="mastertotal" for="gst"></output>
